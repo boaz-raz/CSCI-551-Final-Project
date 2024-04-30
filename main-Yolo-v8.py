@@ -26,7 +26,7 @@ with open(file_path, 'r') as file:
 # Assuming the JSON data is loaded into 'data'
 def my_function(search_term):
     search_term = str(search_term)
-    print("*****", search_term)
+    #print("*****", search_term)
     matching_items = []  # To store items matching the search term with their nutrients
 
     # Process each food item
@@ -69,7 +69,7 @@ def my_function(search_term):
     print_top_5(top_5_carbs, 'carbohydrates')
     #time.sleep(1)
 
-cap = cv2.VideoCapture("video-109_singular_display.mp4")
+cap = cv2.VideoCapture("temp/video-134_singular_display.mp4")
 model = YOLO("best-3.pt")
 
 while True:
@@ -82,12 +82,9 @@ while True:
     bboxes = np.array(result.boxes.xyxy.cpu(), dtype="int")
     classes = np.array(result.boxes.cls.cpu(), dtype="int")
     try:
-      data = np.array(lines[classes[0]])
-      if (data.size > 0):
-        print(lines[classes[0]])
-        temp = lines[classes[0]]
-        print(""+temp+"")
-        my_function(temp[:-1])
+      temp = lines[classes[0]]
+      print("***",temp)
+      my_function(temp[:-1])
     except IndexError:
       print("Attempted to access an index that doesn't exist")
     for cls, bbox in zip(classes, bboxes):

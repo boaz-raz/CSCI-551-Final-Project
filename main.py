@@ -9,8 +9,8 @@ with open(file_path, 'r') as file:
 
 
 # Assuming the JSON data is loaded into 'data'
-# search_term = "Ice cream"
-search_term = "Pizza"
+search_term = "Ice cream"
+# search_term = "Pizza"
 # search_term = "Chicken"
 matching_items = []  # To store items matching the search term with their nutrients
 

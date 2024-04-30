@@ -1,3 +1,4 @@
+'-'
 Chicken
 Cookie
 Hot dog
@@ -7,7 +8,7 @@ Oatmeal
 Pizza
 Rice
 Sour cream
-burger
+Beef
 object
 pasta
 salmon
